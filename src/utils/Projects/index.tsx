@@ -5,9 +5,15 @@ import React, { createContext } from "react"
 export const FirebaseProjects = createContext(null)
 export const FirebaseUser = createContext(null)
 
-export const Firebase = ({ children }: any) => {
+export const Firebase = ({
+  children,
+  project,
+}: {
+  children: React.ReactChildren
+  project: string
+}) => {
   const interactor: any = useInteractor(Interactor, ["user"])
-  const currentUser = interactor.projects.onyx.auth()
+  const currentUser = interactor.projects[project].auth()
   console.log(currentUser)
   return (
     <FirebaseUser.Provider value={interactor.user}>

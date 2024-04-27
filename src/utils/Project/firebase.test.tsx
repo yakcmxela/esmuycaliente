@@ -12,9 +12,9 @@ describe("<Firebase /> Component", () => {
     console.log(props)
     expect(props.value).toHaveProperty("uid")
   })
-  it("Should pass 'onyx-and-rose' project as a prop", () => {
+  it("Should pass project-1 project as a prop", () => {
     const props = component.find(FirebaseProjects.Provider).props()
-    expect(props).toHaveProperty("value.onyx")
+    expect(props).toHaveProperty("value.project-1")
   })
   it("Should pass 'katy-hearn-api' project as a prop", () => {
     const props = component.find(FirebaseProjects.Provider).props()
