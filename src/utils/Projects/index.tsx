@@ -1,5 +1,5 @@
 import { Interactor } from "./interactor"
-import { useInteractor } from "./node_modules/shared/hooks"
+import { useInteractor } from "../../shared/hooks"
 import React, { createContext } from "react"
 
 export const FirebaseProjects = createContext(null)
